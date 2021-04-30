@@ -53,6 +53,7 @@ def whitening(X, checks = False):
     return(X_whitened)
 
 def orthogonal_projection(X):
+    """Projection of the covariance matrix data onto its orthogonal basis"""
     #<XX^T> calculus
     Cov_X=np.cov(X)
            
@@ -62,3 +63,8 @@ def orthogonal_projection(X):
     X_projected=np.transpose(P).dot(X)
     
     return(X_projected)
+
+def residual(source,recovered):
+    """Calculus of the residual between a signal and its reconstruction in purcent"""
+    residual=np.abs(source-recovered)/np.max(np.abs(source))*100
+    return(residual)

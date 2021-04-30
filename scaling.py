@@ -15,11 +15,20 @@ def rad_to_deg(theta):
     """Convert a angle from radians to degrees"""
     return(180/np.pi*theta)
 
-def rescaling(X_template,X_target):
-    X_target_scaled=[]
+
+def rescaling(X_source,X_target, checking_parameter):
+    """Scales signal source to the amplitude of the siganl target"""
+    #Checking parameter enables to see the coefficient of proportionnality from source to target
+    X_source_scaled=[]
     for i in range (0,2):
-        scale_template=(max(X_template[i])-min(X_template[i]))/2
+        scale_template=(max(X_source[i])-min(X_source[i]))/2
         scale_target=(max(X_target[i])-min(X_target[i]))/2
-        
-        X_target_scaled.append(X_target[i]*scale_template/scale_target)
-    return(X_target_scaled)
+        if checking_parameter == True:
+            print('Scaling coefficient from source to target equals: '+ str(scale_target/scale_template))
+        X_source_scaled.append(X_source[i]*scale_target/scale_template)
+    return(X_source_scaled)
+
+def norming(audio):
+    """Norming of a signal to a 1 amplitude"""
+    audio_normed=audio/np.max(np.abs(audio))
+    return(audio_normed)

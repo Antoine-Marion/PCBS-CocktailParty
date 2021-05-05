@@ -1,8 +1,25 @@
-## Welcome to GitHub Pages
+# A resolution of the cocktail party problem
 
-You can use the [editor on GitHub](https://github.com/Antoine-Marion/PCBS-CocktailParty/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This repositories aims to propose a simple resolution of the Cocktail Party Problem.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+## Presentation of the Cocktail Party Problem
+
+The cocktail party effect is the phenomenon of the brain's ability to focus one's auditory attention on a particular stimulus while filtering out a range of other stimuli, as when a partygoer can focus on a single conversation in a noisy room. Since the seventies, it has been propose this natural cognitive ability thanks to an Independant Component Analysis (ICA) algorithm.
+
+### Inputs of the program
+Two mono or stereo files. The inputs are described as the sources.
+
+### Simulation of the superposition of the input sounds
+The superposition of the input sounds is proposed to be computed thanks to three differents ways:
+1. A random repartition
+2. An arbitrary repartition decided by the user
+3. A repartition based on the physics of spheric waves dissipation which needs to provide the spatial positions of the mics and sources.
+
+From the mixing result the audio signals recorded by the mics
+
+### Objective of the program
+Retrieve the original source signals from the two overlays recorded by the two microphones.
 
 ### Markdown
 

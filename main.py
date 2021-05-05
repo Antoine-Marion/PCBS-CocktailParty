@@ -19,12 +19,12 @@ import numpy as np
 
 #%%
 # Parameters to reveal some plottings and printings checking to process
-data_exploration=False
-check_data_parameter=False
-check_PCA_parameter=False
-check_ICA_parameter= False
-metrics_checks=False
-further_checks=False
+data_exploration=True
+check_data_parameter=True
+check_PCA_parameter=True
+check_ICA_parameter= True
+metrics_checks=True
+further_checks=True
 
 
 
@@ -40,8 +40,8 @@ results_folder = "D:/Documents_locaux/Codes_PCBS/Cocktail Party Problem/Results/
 
 #%%
 #Audio acquisition and visualisation
-audio_1,time_1,=open_sounds(sound_1, screening=True)
-audio_2,time_2= open_sounds(sound_2, screening=True)
+audio_1,time_1,=open_sounds(sound_1, screening=False)
+audio_2,time_2= open_sounds(sound_2, screening=False)
 
 #%%
 
